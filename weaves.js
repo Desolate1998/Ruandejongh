@@ -31,7 +31,7 @@ sq.position.z = 401
 var spheres = []
 
 //create objects
-for (let row = -40; row <= 40; row++) {
+for (let row = -400; row <= 400; row++) {
     var rows = []
     for (let columns = -15; columns <= 15; columns++) {
         var geometry = new THREE.SphereGeometry(5, 5);

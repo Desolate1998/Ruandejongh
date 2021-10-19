@@ -6,11 +6,13 @@ var menu = [
 var menuId = 0
 
 menu[0].addEventListener("click", function(e) {
+    console.log('clicked')
     menu[1].classList.remove('focused');
     menu[2].classList.remove('focused');
     menu[0].classList.add('focused');
     menuId = 0
     menuSound.play()
+    console.log('clicked')
 })
 
 menu[1].addEventListener("click", function(e) {
