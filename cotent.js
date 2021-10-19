@@ -5,6 +5,31 @@ var menu = [
 ]
 var menuId = 0
 
+menu[0].addEventListener("click", function(e) {
+    menu[1].classList.remove('focused');
+    menu[2].classList.remove('focused');
+    menu[0].classList.add('focused');
+    menuId = 0
+    menuSound.play()
+})
+
+menu[1].addEventListener("click", function(e) {
+    menu[0].classList.remove('focused');
+    menu[2].classList.remove('focused');
+    menu[1].classList.add('focused');
+    menuId = 1
+    menuSound.play()
+})
+
+menu[2].addEventListener("click", function(e) {
+    menu[1].classList.remove('focused');
+    menu[0].classList.remove('focused');
+    menu[2].classList.add('focused');
+    menuId = 2
+    menuSound.play()
+})
+
+
 
 var menuSound = new Audio('./Sounds/Menu Selection Click.wav')
 
