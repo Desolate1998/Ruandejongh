@@ -7,13 +7,13 @@ var menuId = 0
 var A = document.getElementById('A')
 menu[menuId].append(A);
 
-
+var upArrow = document.getElementById('upArrow')
+var downArrow = document.getElementById('downArrow')
 
 function animateMenuSelect() {
     var menuElement = document.getElementById('menu');
     var menuContent = document.getElementById('displayContent');
-    menuElement.style.left += '100px'
-    menuElement.style.position = 'absolute'
+
 }
 
 
@@ -51,6 +51,8 @@ menu[2].addEventListener("click", function(e) {
 
 })
 
+downArrow.style.color = 'grey'
+upArrow.style.color = 'grey'
 
 
 var menuSound = new Audio('./Sounds/Menu Selection Click.wav')
@@ -70,23 +72,40 @@ function checkKey(e) {
     e = e || window.event;
     if (e.keyCode == '38') {
         //up arrow was clicked
+        upArrow.style.color = 'white'
+
+        setTimeout(() => {
+
+            upArrow.style.color = 'grey'
+
+        }, 100);
         if (menuId != 0) {
             menuSound.play()
 
             menu[menuId].classList.remove('focused');
             menu[--menuId].classList.add('focused');
             menu[menuId].append(A);
+
         }
 
     } else if (e.keyCode == '40') {
-        console.log(menuId)
+        downArrow.style.color = 'white'
+
+        setTimeout(() => {
+
+            downArrow.style.color = 'grey'
+
+        }, 100);
+        setTimeout(() => {
+            downArrow.style.transform = 'scale(1)'
+        }, 100);
         if (menuId != 2) {
+
             menuSound.play()
-
             menu[menuId].classList.remove('focused');
-
             menu[++menuId].classList.add('focused');
             menu[menuId].append(A);
+
         }
 
     } else if (e.keyCode == '37') {
