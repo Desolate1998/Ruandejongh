@@ -7,8 +7,6 @@ var menuId = 0
 
 
 var menuSound = new Audio('./Sounds/Menu Selection Click.wav')
-var music = new Audio('./Sounds/assassin_s_creed_iv_black_flag_main_menu_theme_-2100968450569404998.mp3');
-music.play()
 
 menuSound.playbackRate = 10
 document.onkeydown = checkKey;
@@ -38,5 +36,11 @@ function checkKey(e) {
         // right arrow
 
     }
+
+}
+
+function playMusic() {
+    var music = new Audio('./Sounds/assassin_s_creed_iv_black_flag_main_menu_theme_-2100968450569404998.mp3');
+    music.play()
 
 }
