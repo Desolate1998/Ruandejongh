@@ -61,6 +61,11 @@ document.onkeydown = checkKey;
 
 function checkKey(e) {
 
+    if (e.keyCode == '65' || e.keyCode == '13') {
+        alert('menu clicked')
+    }
+
+
     animateMenuSelect()
     e = e || window.event;
     if (e.keyCode == '38') {
