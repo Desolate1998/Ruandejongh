@@ -33,7 +33,7 @@ h1 {
     background-color: none;
     display: block;
     position: absolute;
-    bottom: -10%;
+    bottom: 0%;
 }
 
 #content {
@@ -48,7 +48,6 @@ h1 {
     height: 100vh;
     position: absolute;
     z-index: 1;
-    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -57,6 +56,8 @@ h1 {
     width: 500px;
     height: 600px;
     transform: skewY(2deg);
+    display: flex;
+    align-items: center;
 }
 
 h2 {
@@ -69,10 +70,12 @@ h2 {
 }
 
 .focused {
-    background: rgb(28, 43, 43);
-    background: linear-gradient(56deg, rgba(28, 43, 43, .7) 0%, rgba(20, 36, 38, .1) 41%, rgba(115, 123, 102, .2) 61%, rgba(223, 222, 148, .1), rgba(211, 211, 211, 0.2) 98%);
-    border-radius: 10px 10px 10000px 10px;
-    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(102, 102, 102, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    /* background: rgba(28, 43, 43, .7); */
+    /* background: linear-gradient(56deg, rgba(28, 43, 43, .1) 0%, rgba(20, 36, 38, .1) 41%, rgba(115, 123, 102, .2) 61%, rgba(223, 222, 148, .1), rgba(211, 211, 211, 0.2) 98%); */
+    border-radius: 10px 1000px 1000px 10px;
+    box-shadow: rgb(85, 179, 182) 0px 0px 20px 1px;
+    backdrop-filter: blur(100px);
+    background-color: rgba(255, 255, 255, .1);
 }
 
 .playMusic {
@@ -93,8 +96,4 @@ h2 {
     background-color: rgb(12, 84, 102);
     border-radius: 25px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-}
-
-.content {
-    display: flex;
 }

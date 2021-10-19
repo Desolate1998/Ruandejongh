@@ -5,20 +5,21 @@ var menu = [
 ]
 var menuId = 0
 var A = document.getElementById('A')
-menu[menuId].append(A);
-
+var menuSound = new Audio('./Sounds/Menu Selection Click.wav')
 var upArrow = document.getElementById('upArrow')
 var downArrow = document.getElementById('downArrow')
+menu[menuId].append(A);
 
 function animateMenuSelect() {
     var menuElement = document.getElementById('menu');
     var menuContent = document.getElementById('displayContent');
 
+
+
 }
 
 
 menu[0].addEventListener("click", function(e) {
-
     menu[1].classList.remove('focused');
     menu[2].classList.remove('focused');
     menu[0].classList.add('focused');
@@ -55,7 +56,6 @@ downArrow.style.color = 'grey'
 upArrow.style.color = 'grey'
 
 
-var menuSound = new Audio('./Sounds/Menu Selection Click.wav')
 
 menuSound.playbackRate = 10
 document.onkeydown = checkKey;
@@ -64,11 +64,11 @@ document.onkeydown = checkKey;
 function checkKey(e) {
 
     if (e.keyCode == '65' || e.keyCode == '13') {
-        alert('menu clicked')
+        animateMenuSelect()
     }
 
 
-    animateMenuSelect()
+
     e = e || window.event;
     if (e.keyCode == '38') {
         //up arrow was clicked
@@ -85,6 +85,7 @@ function checkKey(e) {
             menu[menuId].classList.remove('focused');
             menu[--menuId].classList.add('focused');
             menu[menuId].append(A);
+
 
         }
 

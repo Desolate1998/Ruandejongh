@@ -24,7 +24,7 @@
         function playMusic() {
             if (isPlaying == false) {
 
-                music.play()
+                music.play();
                 music.volume = .1;
                 isPlaying = true;
             } else {
@@ -50,33 +50,27 @@
 
 
         }
-        setTimeout(() => {
-            no()
-        }, 1)
+        //setTimeout(() => {
+        //yes()
+        //}, 1)
     </script>
 
 
     <div id="main-container" class="content-container" hidden>
-
-        <div>
-            <div class="content" id="menu">
-                <div>
-                    <h2> <i id="upArrow" class="fa fa-chevron-up" aria-hidden="true"></i>
-                    </h2>
-                    <h2> <i id="downArrow" class="fa fa-chevron-down" aria-hidden="true"></i></h2>
-
-                </div>
-                <div>
-                    <h2 id="aboutMe" class="focused">About Me</h2>
-                    <h2 id="education">Education </h2>
-                    <h2 id="protfolio">Portfolio</h2>
-                </div>
+        <div class="content" id="menu">
+            <div>
+                <h2> <i id="upArrow" class="fa fa-chevron-up" aria-hidden="true"></i></h2>
+                <h2> <i id="downArrow" class="fa fa-chevron-down" aria-hidden="true"></i></h2>
+            </div>
+            <div>
+                <h2 id="aboutMe" class="focused">About Me</h2>
+                <h2 id="education">Education </h2>
+                <h2 id="protfolio">Portfolio</h2>
             </div>
         </div>
-
     </div>
+    <div id='displayContent'></div>
 
-    <div class="content" id="displayContent">
 
     </div>
     <div id="popup" class="popup" style="   min-height: 20vh;
@@ -90,7 +84,7 @@
                                             border-radius: 25px;
                                             box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;">
 
-        <h1>This Website uses music , would you like to enable it?</h1>
+        <h1>This Website uses music , would you like to enable it? (TEMP POP UP)</h1>
         <a name="" onclick="yes()" id="" class="btn btn-primary" href="#" role="button">yes</a>
         <a name="" id="" onclick="no()" class="btn btn-danger" href="#" role="button">No</a>
     </div>

@@ -2,7 +2,7 @@ import * as THREE from './Vendor/three.module.js';
 var canvas = document.getElementById('waves')
 const scene = new THREE.Scene();
 
-const camera = new THREE.PerspectiveCamera(800, window.innerWidth / 400, 2, 90000);
+const camera = new THREE.PerspectiveCamera(600, window.innerWidth / 300, 2, 90000);
 const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true, canvas: canvas, });
 const light = new THREE.PointLight('lightblue', 1, 100);
 camera.position.z = 700
@@ -65,12 +65,12 @@ for (let row = -400; row <= 400; row++) {
 
 //animation
 const rendering = function() {
-    var limit = 300
-    var moveAmount = 1
+    var limit = 600
+    var moveAmount = 100
     requestAnimationFrame(rendering);
     for (let row = 0; row < spheres.length; row++) {
         for (let column = 0; column < spheres[row].length; column++) {
-            moveAmount = Math.random() * 1
+            moveAmount = Math.random() * 10
             if (spheres[row][column].goingUp == true) {
                 if (spheres[row][column].object.position.y > row + limit) {
                     spheres[row][column].goingUp = false;
