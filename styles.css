@@ -6,9 +6,12 @@
 body {
     padding: 0;
     margin: 0;
-    background-color: #1A2B31;
+    background: rgb(26, 43, 49);
+    background: linear-gradient(0deg, rgba(26, 43, 49, 1) 0%, rgba(28, 52, 55, 1) 34%, rgba(52, 89, 102, 1) 98%);
     overflow-y: hidden;
     color: #56b6bb;
+    height: 100vh;
+    width: 100%;
 }
 
 h1 {

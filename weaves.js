@@ -3,13 +3,13 @@ var canvas = document.getElementById('waves')
 const scene = new THREE.Scene();
 
 const camera = new THREE.PerspectiveCamera(800, window.innerWidth / 400, 2, 90000);
-const renderer = new THREE.WebGLRenderer({ antialias: true, canvas: canvas });
+const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true, canvas: canvas, });
 const light = new THREE.PointLight('lightblue', 1, 100);
 camera.position.z = 700
 
 renderer.setClearColor("#1A2B31"); //old #1d1d1d
 renderer.setSize(window.innerWidth, 300);
-
+renderer.setClearColor(0x000000, 0);
 
 light.position.set(10, 0, 0);
 scene.add(light);
