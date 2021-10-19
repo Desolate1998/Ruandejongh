@@ -12,9 +12,43 @@
 </head>
 
 <body>
-    <button onclick="playMusic()">Mute</button>
-    <audio src="./Sounds/awesomeness.wav" loop="true" autoplay> </audio>
-    <div class="content-container">
+
+    <script>
+        var isPlaying = false;
+        var music = new Audio('./Sounds/awesomeness.wav');
+
+        function playMusic() {
+            if (isPlaying == false) {
+
+                music.play()
+                music.volume = .1;
+                isPlaying = true;
+            } else {
+                isPlaying = false;
+                music.pause()
+                music.currentTime = 0;
+            }
+
+
+        }
+
+
+        function yes() {
+            document.getElementById('main-container').hidden = false
+            document.getElementById('popup').hidden = true
+            playMusic()
+        }
+
+        function no() {
+            document.getElementById('main-container').hidden = false
+            document.getElementById('popup').hidden = true
+
+
+        }
+    </script>
+
+
+    <div id="main-container" class="content-container" hidden>
         <div class="content">
 
             <h2 id="aboutMe" class="focused">About Me</h2>
@@ -26,7 +60,11 @@
 
         </div>
     </div>
-
+    <div id="popup" class="popup">
+        <h1>This Website uses music , would you like to enable it?</h1>
+        <a name="" onclick="yes()" id="" class="btn btn-primary" href="#" role="button">yes</a>
+        <a name="" id="" onclick="no()" class="btn btn-danger" href="#" role="button">No</a>
+    </div>
     <canvas id="waves"> </canvas>
     <!-- <div class="nav justify-content-end ">
         <a href="" class="home">Home</a>

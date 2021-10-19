@@ -70,3 +70,23 @@ h2 {
     background: linear-gradient(56deg, rgba(28, 43, 43, .1) 0%, rgba(20, 36, 38, .1) 41%, rgba(115, 123, 102, .1) 61%, rgba(223, 222, 148, .1) 98%);
     border-radius: 10px;
 }
+
+.playMusic {
+    background: none;
+    border: 1px solid;
+    height: 100px;
+    width: 100px;
+}
+
+.popup {
+    min-height: 20vh;
+    width: 60%;
+    left: 20%;
+    padding: 100px;
+    top: 40vh;
+    z-index: 4;
+    position: absolute;
+    background-color: rgb(12, 84, 102);
+    border-radius: 25px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}

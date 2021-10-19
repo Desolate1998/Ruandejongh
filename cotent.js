@@ -38,9 +38,3 @@ function checkKey(e) {
     }
 
 }
-
-function playMusic() {
-    var music = new Audio('./Sounds/assassin_s_creed_iv_black_flag_main_menu_theme_-2100968450569404998.mp3');
-    music.play()
-
-}
