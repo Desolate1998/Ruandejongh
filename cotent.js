@@ -13,6 +13,11 @@ menu[menuId].append(A);
 function animateMenuSelect() {
     var menuElement = document.getElementById('menu');
     var menuContent = document.getElementById('displayContent');
+    if (menuId == 0) {
+        menuContent.innerHTML = pages.aboutMe
+    } else if (menuId == 1) {
+        menuContent.innerHTML = pages.education
+    }
 
 
 
@@ -26,7 +31,8 @@ menu[0].addEventListener("click", function(e) {
     menuId = 0
     menuSound.play()
     menu[0].append(A);
-    document.getElementById('displayContent').innerHTML = pages.aboutMe
+    animateMenuSelect()
+
 })
 
 menu[1].addEventListener("click", function(e) {
@@ -36,8 +42,9 @@ menu[1].addEventListener("click", function(e) {
     menu[1].classList.add('focused');
     menuId = 1
     menuSound.play()
+    animateMenuSelect()
 
-    document.getElementById('displayContent').innerHTML = pages.education
+
 
 })
 
@@ -48,7 +55,7 @@ menu[2].addEventListener("click", function(e) {
     menu[2].classList.add('focused');
     menuId = 2
     menuSound.play()
-    document.getElementById('displayContent').innerHTML = pages.portfolio
+    animateMenuSelect()
 
 })
 

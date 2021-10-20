@@ -48,8 +48,8 @@ h1 {
     height: 100vh;
     position: absolute;
     z-index: 1;
-    justify-content: center;
     align-items: center;
+    display: flex;
 }
 
 .content {
@@ -96,4 +96,49 @@ h2 {
     background-color: rgb(12, 84, 102);
     border-radius: 25px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.save-data {
+    width: 100%;
+    background-size: 100% 100% no;
+    font-size: 17pt;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(14, 46, 46, 0.452);
+    padding: 10px;
+    transition: .2s;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+#displayContent {
+    width: 700px;
+    margin-left: 100px;
+}
+
+.save-data:hover {
+    box-shadow: rgb(85, 179, 182) 0px 0px 20px 1px;
+    backdrop-filter: blur(100px);
+    background-color: rgba(255, 255, 255, .1);
+    transform: scale(1.2);
+}
+
+label {
+    color: #D3D288;
+}
+
+.whiteText {
+    color: #56b6bb;
+}
+
+.Education {
+    background-size: 100% 100% no;
+    font-size: 17pt;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(14, 46, 46, 0.452);
+    padding: 10px;
+    transition: .2s;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }

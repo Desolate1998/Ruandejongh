@@ -12,7 +12,7 @@ renderer.setSize(window.innerWidth, 300);
 renderer.setClearColor(0x000000, 0);
 
 light.position.set(10, 0, 0);
-scene.add(light);
+// scene.add(light);
 
 window.addEventListener('resize', () => {
     renderer.setSize(window.innerWidth, 300);
@@ -35,7 +35,7 @@ for (let row = -400; row <= 400; row++) {
     var rows = []
     for (let columns = -15; columns <= 15; columns++) {
         var geometry = new THREE.SphereGeometry(5, 5);
-        var r = Math.random();
+
         var material;
 
         if (-40 < row && row < -10) {
@@ -66,11 +66,13 @@ for (let row = -400; row <= 400; row++) {
 //animation
 const rendering = function() {
     var limit = 600
-    var moveAmount = 100
+    var moveAmount = 20
     requestAnimationFrame(rendering);
-    for (let row = 0; row < spheres.length; row++) {
+    for (let row = 0; row < spheres.length; row++) {}
+
+    for (let row = spheres.length - 1; row >= 0; row--) {
         for (let column = 0; column < spheres[row].length; column++) {
-            moveAmount = Math.random() * 10
+            // moveAmount = Math.random() * 10
             if (spheres[row][column].goingUp == true) {
                 if (spheres[row][column].object.position.y > row + limit) {
                     spheres[row][column].goingUp = false;
